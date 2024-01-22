@@ -5,6 +5,7 @@ const body = document.getElementById('body')
 const container = document.getElementById('container')
 const cityName = document.getElementById('city')
 const btnSearch = document.getElementById('btn_search')
+const weatherIcon = document.getElementById('weather_icon')
 
 async function getClima(city){
 
@@ -42,9 +43,10 @@ async function getClima(city){
   }
 }
 
-btnSearch.addEventListener('click',async ()=>{
+btnSearch.addEventListener('click',async ()=>{   
  await getClima(cityName.value)
  cityName.value = ''
+ weatherIcon.style.display = 'none'
 })
 
 
