@@ -23,7 +23,7 @@ async function getClima(city){
   container.innerHTML = `
   <h2>Cuidad: ${city}</h2>
   <h2>Temperatura: ${Math.floor(celcius)}</h2>
-  <h2>${weather}</h2>
+  <h2></h2>
   `
   // city.innerHTML = `Cuidad: ${name}`
   // temperature.innerHTML = `Temperatura: ${Math.floor(kelvinToCelcius)}`
