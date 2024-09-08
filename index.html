@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicacion del clima</title>
+    <title>Aplicación del clima</title>
     <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body id="body">
-    <!-- <h1>App del clima</h1> -->
-    <div >
-        <img id="weather_icon" src="./assets/weather-forecast.png" alt="">
+    <div class="weather_app">
+        <div class="weather_icon_container">
+            <img id="weather_icon" src="./assets/weather-forecast.png" alt="Weather Icon">
+        </div>
+        <div class="container_search_city">
+            <input type="text" id="city" placeholder="Busca una ciudad">
+            <button id="btn_search">Buscar</button>
+        </div>
+        <div class="container" id="container"></div>
     </div>
-    <div  class="container_search_city">
-        <input type="text" id="city" placeholder="Busca una cuidad">
-        <button id="btn_search" >Buscar</button>
-    </div>
-    <div class="container" id="container"></div>
-  
+    <script src="./app.js"></script>
 </body>
-<script src="./app.js"></script>
 </html>
