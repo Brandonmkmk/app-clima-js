@@ -29,13 +29,22 @@ async function getClima(city){
   container.style.backgroundColor = 'rgba(80, 80, 80, 0.8)'
   container.style.borderRadius = '10px'
   container.style.color = 'white'
-  container.style.backgroundColor = 'rgba(80, 80, 80, 0.8)'
-  container.style.backgroundColor = 'rgba(80, 80, 80, 0.8)'
+  
   // city.innerHTML = `Cuidad: ${name}`
   // temperature.innerHTML = `Temperatura: ${Math.floor(kelvinToCelcius)}`
 }
 
-btnSearch.addEventListener('click',async ()=>{   
+btnSearch.addEventListener('click',async ()=>{
+ if(cityName.value === ''){
+  container.innerHTML = `
+  <h3>Ingresa una cuidad a buscar</h3>
+  `
+  container.style.backgroundColor = 'orange'
+  container.style.color = '#f4f2ee'
+  container.style.borderRadius = '5px'
+  return 
+  
+ }     
  await getClima(cityName.value)
  cityName.value = ''
 //  weatherIcon.style.display = 'none'
